@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="PAGE_CONTAINER" modification_key="wutime_snowstorm_page_container" description="Enable snow storm effects" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[</head>]]></find>
+    <replace><![CDATA[<xf:if is="$xf.options.wutime_snowstorm_enable">
+	<xf:if is="!$xf.visitor.isMemberOf($xf.options.wutime_snowstorm_ignore_usergroups)">
+		<xf:if is="$xf.session.wutime_snowstorm_count == ''">
+			<xf:set var="$xf.session.wutime_snowstorm_count" value="1" />
+		<xf:elseif is="$xf.session.wutime_snowstorm_count == 0" />
+			<xf:comment>WE JUST SHOWED</xf:comment>
+			<xf:set var="$xf.session.wutime_snowstorm_count" value="1" />
+		<xf:else />
+			<xf:comment>WE ENUMERATE</xf:comment>
+			<xf:set var="$xf.session.wutime_snowstorm_count" value="{{$xf.session.wutime_snowstorm_count+1}}" />
+		</xf:if>
+		<xf:if is="$xf.session.wutime_snowstorm_count >= $xf.options.wutime_snowstorm_show_every_x_views ">
+			
+			<xf:comment>
+				Reset our page view tracker
+			</xf:comment>
+			
+			<xf:if is="$xf.options.wutime_snowstorm_option_theme == 'Default'">
+				<xf:js addon="Wutime/SnowStorm" src="wutime_snowstorm/snowstorm.js" min="1"/>
+				<xf:if is="$xf.options.wutime_snowstorm_show_mobile">
+					<script>snowStorm.excludeMobile = false;</script>
+				<xf:else />
+					<script>snowStorm.excludeMobile = true;</script>
+				</xf:if>
+			<xf:else />
+				<xf:js addon="Wutime/SnowStorm" src="wutime_snowstorm/snow.js" min="1"/>
+			</xf:if>
+			
+			<xf:set var="$xf.session.wutime_snowstorm_count" value="0" />			
+
+		</xf:if>
+	</xf:if>
+</xf:if>
+
+$0]]></replace>
+  </modification>
+</template_modifications>

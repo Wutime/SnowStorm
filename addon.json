@@ -1,0 +1,14 @@
+{
+    "legacy_addon_id": "",
+    "title": "[Wutime] Make Pages Snow",
+    "description": "",
+    "version_id": 1000570,
+    "version_string": "1.0.5",
+    "dev": "Wutime",
+    "dev_url": "https://www.wutime.com",
+    "faq_url": "",
+    "support_url": "https://xenforo.com/community/threads/wutime-snow-storm-effect.173821/",
+    "extra_urls": [],
+    "require": [],
+    "icon": "wu-logo-medium.png"
+}

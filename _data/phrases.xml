@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="option.wutime_snowstorm_enable" version_id="1000110" version_string="1.0.1 Alpha"><![CDATA[Enable snow storm]]></phrase>
+  <phrase title="option.wutime_snowstorm_ignore_usergroups" version_id="1000110" version_string="1.0.1 Alpha"><![CDATA[Ignore these user groups]]></phrase>
+  <phrase title="option.wutime_snowstorm_option_theme" version_id="1000370" version_string="1.0.3"><![CDATA[Theme]]></phrase>
+  <phrase title="option.wutime_snowstorm_show_every_x_views" version_id="1000110" version_string="1.0.1 Alpha"><![CDATA[Show every X page views]]></phrase>
+  <phrase title="option.wutime_snowstorm_show_mobile" version_id="1000470" version_string="1.0.4"><![CDATA[Show to mobile visitors (snow storm theme only)]]></phrase>
+  <phrase title="option_explain.wutime_snowstorm_enable" version_id="1000110" version_string="1.0.1 Alpha"><![CDATA[]]></phrase>
+  <phrase title="option_explain.wutime_snowstorm_ignore_usergroups" version_id="1000110" version_string="1.0.1 Alpha"><![CDATA[]]></phrase>
+  <phrase title="option_explain.wutime_snowstorm_option_theme" version_id="1000370" version_string="1.0.3"><![CDATA[]]></phrase>
+  <phrase title="option_explain.wutime_snowstorm_show_every_x_views" version_id="1000110" version_string="1.0.1 Alpha"><![CDATA[<div>If you'd like to only show snow sometimes, specify the frequency here.</div>]]></phrase>
+  <phrase title="option_explain.wutime_snowstorm_show_mobile" version_id="1000110" version_string="1.0.1 Alpha"><![CDATA[]]></phrase>
+  <phrase title="option_group.wutime_snowstorm_options" version_id="1000110" version_string="1.0.1 Alpha"><![CDATA[[Wutime] Make Pages Snow]]></phrase>
+  <phrase title="option_group_description.wutime_snowstorm_options" version_id="1000110" version_string="1.0.1 Alpha"><![CDATA[Add a snow storm effect to your web pages for the holidays.]]></phrase>
+</phrases>
