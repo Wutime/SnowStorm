@@ -1,29 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <options>
-  <option option_id="wutime_snowstorm_enable" edit_format="onoff" data_type="string">
+  <option option_id="wutime_snowstorm_enable" edit_format="onoff" data_type="string" advanced="0">
     <default_value>0</default_value>
     <relation group_id="wutime_snowstorm_options" display_order="1"/>
   </option>
-  <option option_id="wutime_snowstorm_ignore_usergroups" edit_format="callback" data_type="array">
+  <option option_id="wutime_snowstorm_ignore_usergroups" edit_format="callback" data_type="array" advanced="0">
     <default_value>[]</default_value>
     <edit_format_params>\XF\Option\UserGroup::renderSelectMultiple</edit_format_params>
     <sub_options>*</sub_options>
     <relation group_id="wutime_snowstorm_options" display_order="10"/>
   </option>
-  <option option_id="wutime_snowstorm_option_theme" edit_format="radio" data_type="string">
+  <option option_id="wutime_snowstorm_js_customizations" edit_format="textbox" data_type="string" advanced="0">
+    <default_value>snowStorm.snowColor = '#fff';
+snowStorm.flakesMaxActive = 64;
+snowStorm.useTwinkleEffect = true;</default_value>
+    <edit_format_params>rows=5</edit_format_params>
+    <relation group_id="wutime_snowstorm_options" display_order="400"/>
+  </option>
+  <option option_id="wutime_snowstorm_option_theme" edit_format="radio" data_type="string" advanced="0">
     <default_value>Snow</default_value>
     <edit_format_params>Snow=Snow (light-weight)
 Default=Snow Storm</edit_format_params>
     <relation group_id="wutime_snowstorm_options" display_order="2"/>
   </option>
-  <option option_id="wutime_snowstorm_show_every_x_views" edit_format="spinbox" data_type="positive_integer">
+  <option option_id="wutime_snowstorm_show_every_x_views" edit_format="spinbox" data_type="positive_integer" advanced="0">
     <default_value>1</default_value>
     <edit_format_params>min=1
 max=100</edit_format_params>
     <relation group_id="wutime_snowstorm_options" display_order="5"/>
   </option>
-  <option option_id="wutime_snowstorm_show_mobile" edit_format="onoff" data_type="string">
+  <option option_id="wutime_snowstorm_show_mobile" edit_format="onoff" data_type="string" advanced="0">
     <default_value>0</default_value>
-    <relation group_id="wutime_snowstorm_options" display_order="50"/>
+    <relation group_id="wutime_snowstorm_options" display_order="200"/>
   </option>
 </options>

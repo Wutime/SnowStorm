@@ -1,0 +1,20 @@
+{
+    "option.wutime_snowstorm_js_customizations.txt": {
+        "global_cache": false,
+        "version_id": 1010070,
+        "version_string": "1.1.0",
+        "hash": "a3d743c5697bd3cf7ffcf8b5e489a1e4"
+    },
+    "option.wutime_snowstorm_show_mobile.txt": {
+        "global_cache": false,
+        "version_id": 1010070,
+        "version_string": "1.1.0",
+        "hash": "0f9a09f4d79410cc587637d129d552f1"
+    },
+    "option_explain.wutime_snowstorm_js_customizations.txt": {
+        "global_cache": false,
+        "version_id": 1010070,
+        "version_string": "1.1.0",
+        "hash": "9fbed1d89310f26e1c4b6bcf12f3fdfd"
+    }
+}

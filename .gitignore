@@ -1,0 +1,6 @@
+_backups
+_data
+_releases
+vendor
+hashes.json
+**/.DS_Store

@@ -1,0 +1,13 @@
+{
+    "edit_format": "radio",
+    "edit_format_params": "Snow=Snow (light-weight)\nDefault=Snow Storm",
+    "data_type": "string",
+    "sub_options": [],
+    "validation_class": "",
+    "validation_method": "",
+    "advanced": false,
+    "default_value": "Snow",
+    "relations": {
+        "wutime_snowstorm_options": 2
+    }
+}

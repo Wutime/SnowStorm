@@ -1,0 +1,13 @@
+{
+    "additional_files": [
+        "js/wutime/snowstorm/snow.js",
+        "js/wutime/snowstorm/snowstorm.js"
+    ],
+    "minify": [
+        "js/wutime/snowstorm/snow.js",
+        "js/wutime/snowstorm/snowstorm.js"
+    ],"exec": [
+        "rm -rf _build/upload/src/addons/{addon_id}/*.sh",
+        "rm -rf _build/upload/src/addons/{addon_id}/*.txt"
+    ]
+}
