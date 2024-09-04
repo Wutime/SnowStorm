@@ -63,6 +63,11 @@ INSTALL
 
 	public function installStep1() {
 		$this->setInstallUpgradeVersion();
+
+        $this->schemaManager()->alterTable('xf_user_option', function(Alter $table)
+        {
+            $table->addColumn('wutime_snowstorm_enable', 'tinyint')->setDefault(1)->after('use_tfa');
+        });
 	}
 
 
@@ -88,7 +93,13 @@ UPGRADE
 
 
 
-
+    public function upgrade1020070Step1()
+    {
+        $this->schemaManager()->alterTable('xf_user_option', function(Alter $table)
+        {
+            $table->addColumn('wutime_snowstorm_enable', 'tinyint')->setDefault(1)->after('use_tfa');
+        });
+    }
 
 
 
@@ -120,6 +131,12 @@ UNINSTALL
     public function uninstallStep1()
     {
         $this->stepX('uninstall');
+
+        $this->schemaManager()->alterTable('xf_user_option', function(Alter $table)
+        {
+            $table->dropColumns(['wutime_snowstorm_enable']);
+        });
+
     }
 
 

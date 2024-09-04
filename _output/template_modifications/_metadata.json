@@ -1,5 +1,11 @@
 {
+    "public/wutime_snowstorm_account_preferences.json": {
+        "hash": "b7368ae97d1e219ca9d5075aa7b22db7"
+    },
+    "public/wutime_snowstorm_copyright.json": {
+        "hash": "bbdb8e2649652f9fffc5942865b81b86"
+    },
     "public/wutime_snowstorm_page_container.json": {
-        "hash": "e03ec6c6ddf845d9abf89c7db5858cb4"
+        "hash": "708572336e0692454b201ca708b127c0"
     }
 }

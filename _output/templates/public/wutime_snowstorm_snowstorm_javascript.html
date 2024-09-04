@@ -1,0 +1,23 @@
+<xf:if is="$xf.options.wutime_snowstorm_option_theme == 'Default'">
+	
+	<xf:js addon="Wutime/SnowStorm" 
+		   src="wutime/snowstorm/snowstorm.js" 
+		   defer="true"
+		   min="0" />
+	
+	<xf:if is="$xf.options.wutime_snowstorm_show_mobile">
+		<xf:js>snowStorm.excludeMobile = false;</xf:js>
+	<xf:else />
+		<xf:js>snowStorm.excludeMobile = true;</xf:js>
+	</xf:if>
+	<xf:js>
+		{{$xf.options.wutime_snowstorm_js_customizations}}
+	</xf:js>
+<xf:else />
+	
+	<xf:js addon="Wutime/SnowStorm" 
+		   src="wutime/snowstorm/snow.js" 
+		   defer="true"
+		   min="0" />
+	
+</xf:if>

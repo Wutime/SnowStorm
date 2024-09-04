@@ -12,6 +12,9 @@
   <phrase title="option_explain.wutime_snowstorm_option_theme" version_id="1000370" version_string="1.0.3"><![CDATA[]]></phrase>
   <phrase title="option_explain.wutime_snowstorm_show_every_x_views" version_id="1000110" version_string="1.0.1 Alpha"><![CDATA[<div>If you'd like to only show snow sometimes, specify the frequency here.</div>]]></phrase>
   <phrase title="option_explain.wutime_snowstorm_show_mobile" version_id="1000110" version_string="1.0.1 Alpha"><![CDATA[]]></phrase>
-  <phrase title="option_group.wutime_snowstorm_options" version_id="1000110" version_string="1.0.1 Alpha"><![CDATA[[Wutime] Make Pages Snow]]></phrase>
+  <phrase title="option_group.wutime_snowstorm_options" version_id="1010070" version_string="1.1.0"><![CDATA[[Wutime] Snow Storm Effect]]></phrase>
   <phrase title="option_group_description.wutime_snowstorm_options" version_id="1000110" version_string="1.0.1 Alpha"><![CDATA[Add a snow storm effect to your web pages for the holidays.]]></phrase>
+  <phrase title="wutime_snowstorm_checkboxrow_title" version_id="1020070" version_string="1.2.0"><![CDATA[Snow Storm Effect]]></phrase>
+  <phrase title="wutime_snowstorm_option_title" version_id="1020070" version_string="1.2.0"><![CDATA[Enable snow effects when available]]></phrase>
+  <phrase title="wutime_snowstorm_plugins_by" version_id="1010070" version_string="1.1.0"><![CDATA[Plugins by]]></phrase>
 </phrases>

@@ -1,6 +1,17 @@
+v1.2.1
+FIX: Snow not working due to being out of JS scope
+FIX: Defer javascript
+Removed minification for now because it seems to gimp the snow.js effect (not sure if it's a new chrome browser issue or not)
+
+v1.2.0
+Added: User preference setting
+Added: Ignore snow effects globally based on user preference
+User preference database setting on install/upgrade
+Removem preference on install
+
 v1.1.0
 
-Added option to set customizations for SnowStorm
+Added textarea option to set JS customizations for SnowStorm
 See: https://www.schillmania.com/projects/snowstorm/#customizing
 Updated to v1.44.20131215 snowstorm.js
 Added appropriate javascript path for addon name js/wutime/snowstorm/*.js

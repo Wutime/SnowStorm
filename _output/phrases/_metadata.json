@@ -16,5 +16,29 @@
         "version_id": 1010070,
         "version_string": "1.1.0",
         "hash": "9fbed1d89310f26e1c4b6bcf12f3fdfd"
+    },
+    "option_group.wutime_snowstorm_options.txt": {
+        "global_cache": false,
+        "version_id": 1010070,
+        "version_string": "1.1.0",
+        "hash": "a3ff8d755954174a40889e6933cd075f"
+    },
+    "wutime_snowstorm_checkboxrow_title.txt": {
+        "global_cache": false,
+        "version_id": 1020070,
+        "version_string": "1.2.0",
+        "hash": "bec571819f563d9908afa3e5c9af1751"
+    },
+    "wutime_snowstorm_option_title.txt": {
+        "global_cache": false,
+        "version_id": 1020070,
+        "version_string": "1.2.0",
+        "hash": "b4dd5d1e18aa42ece67242b6766ca610"
+    },
+    "wutime_snowstorm_plugins_by.txt": {
+        "global_cache": false,
+        "version_id": 1010070,
+        "version_string": "1.1.0",
+        "hash": "1071e2c7dabdc2ef3b52dea57a3d03d5"
     }
 }
