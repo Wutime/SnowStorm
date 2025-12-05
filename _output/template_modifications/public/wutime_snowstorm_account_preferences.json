@@ -3,7 +3,7 @@
     "description": "XF 2.2 - Snow Storm account_preferences",
     "execution_order": 10,
     "enabled": true,
-    "action": "str_replace",
-    "find": "<xf:macro template=\"helper_account\" name=\"activity_privacy_row\" />",
+    "action": "preg_replace",
+    "find": "(<xf:macro\\s+(?:id=\"helper_account::activity_privacy_row\"|template=\"helper_account\"\\s+name=\"activity_privacy_row\")\\s*/>)\n",
     "replace": "<xf:include template=\"wutime_snowstorm_option_code\"/>\n\n$0"
 }
