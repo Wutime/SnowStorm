@@ -1,3 +1,9 @@
+v1.3.0
+UPDATE: light-weight snow to v0.0.4 for compatability with XF 2.3x, document.write() and defer
+UPDATE: create proper minified JS in production 
+UPDATE: build.json for updated *.min.js using UglifyJs
+ADD: font-awesome 5 igloo icon to option group
+
 v1.2.1
 FIX: Snow not working due to being out of JS scope
 FIX: Defer javascript

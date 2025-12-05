@@ -1,12 +1,13 @@
 {
     "additional_files": [
         "js/wutime/snowstorm/snow.js",
-        "js/wutime/snowstorm/snowstorm.js"
+        "js/wutime/snowstorm/snow.min.js",
+        "js/wutime/snowstorm/snowstorm.js",
+        "js/wutime/snowstorm/snowstorm.min.js"
     ],
-    "minify": [
-        "js/wutime/snowstorm/snow.js",
-        "js/wutime/snowstorm/snowstorm.js"
-    ],"exec": [
+    "exec": [
+    	"uglifyjs _files/js/wutime/snowstorm/snow.js -o _files/js/wutime/snowstorm/snow.min.js",
+    	"uglifyjs _files/js/wutime/snowstorm/snowstorm.js -o _files/js/wutime/snowstorm/snowstorm.min.js",
         "rm -rf _build/upload/src/addons/{addon_id}/*.sh",
         "rm -rf _build/upload/src/addons/{addon_id}/*.txt"
     ]

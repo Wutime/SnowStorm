@@ -7,12 +7,12 @@
 		label="{{ phrase('wutime_snowstorm_option_title') }}" 
 	/>
 </xf:checkboxrow>]]></template>
-  <template type="public" title="wutime_snowstorm_snowstorm_javascript" version_id="1020170" version_string="1.2.1"><![CDATA[<xf:if is="$xf.options.wutime_snowstorm_option_theme == 'Default'">
+  <template type="public" title="wutime_snowstorm_snowstorm_javascript" version_id="1030070" version_string="1.3.0"><![CDATA[<xf:if is="$xf.options.wutime_snowstorm_option_theme == 'Default'">
 	
 	<xf:js addon="Wutime/SnowStorm" 
 		   src="wutime/snowstorm/snowstorm.js" 
 		   defer="true"
-		   min="0" />
+		   min="1" />
 	
 	<xf:if is="$xf.options.wutime_snowstorm_show_mobile">
 		<xf:js>snowStorm.excludeMobile = false;</xf:js>
@@ -27,7 +27,7 @@
 	<xf:js addon="Wutime/SnowStorm" 
 		   src="wutime/snowstorm/snow.js" 
 		   defer="true"
-		   min="0" />
+		   min="1" />
 	
 </xf:if>]]></template>
 </templates>
