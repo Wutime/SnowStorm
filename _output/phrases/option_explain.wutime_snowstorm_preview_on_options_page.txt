@@ -1,0 +1,1 @@
+When enabled, the selected snow theme renders on this admin options page for testing only, even if the global enable option is off.

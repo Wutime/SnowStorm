@@ -1,6 +1,6 @@
 {
     "edit_format": "radio",
-    "edit_format_params": "Snow=Snow (light-weight)\nDefault=Snow Storm",
+    "edit_format_params": "Snow={{ phrase('wutime_snowstorm_theme_snow_lightweight') }}\nDefault={{ phrase('wutime_snowstorm_theme_snow_storm') }}\nSnowflake={{ phrase('wutime_snowstorm_theme_snowflake') }}",
     "data_type": "string",
     "sub_options": [],
     "validation_class": "",
@@ -8,6 +8,6 @@
     "advanced": false,
     "default_value": "Snow",
     "relations": {
-        "wutime_snowstorm_options": 2
+        "wutime_snowstorm_options": 30
     }
 }

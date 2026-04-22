@@ -1,36 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <options>
-  <option option_id="wutime_snowstorm_enable" edit_format="onoff" data_type="string" advanced="0">
+  <option option_id="wutime_snowstorm_display_scope" edit_format="radio" data_type="string" advanced="0">
+    <default_value>everywhere</default_value>
+    <edit_format_params>everywhere={{ phrase('wutime_snowstorm_scope_everywhere') }}
+homepage={{ phrase('wutime_snowstorm_scope_homepage_only') }}
+selected_forums_only={{ phrase('wutime_snowstorm_scope_selected_forums_only') }}
+selected_forums_exclude={{ phrase('wutime_snowstorm_scope_selected_forums_exclude') }}</edit_format_params>
+    <relation group_id="wutime_snowstorm_options" display_order="400"/>
+  </option>
+  <option option_id="wutime_snowstorm_enable" edit_format="onoff" data_type="boolean" advanced="0">
     <default_value>0</default_value>
-    <relation group_id="wutime_snowstorm_options" display_order="1"/>
+    <relation group_id="wutime_snowstorm_options" display_order="10"/>
   </option>
   <option option_id="wutime_snowstorm_ignore_usergroups" edit_format="callback" data_type="array" advanced="0">
     <default_value>[]</default_value>
     <edit_format_params>\XF\Option\UserGroup::renderSelectMultiple</edit_format_params>
     <sub_options>*</sub_options>
-    <relation group_id="wutime_snowstorm_options" display_order="10"/>
+    <relation group_id="wutime_snowstorm_options" display_order="500"/>
   </option>
   <option option_id="wutime_snowstorm_js_customizations" edit_format="textbox" data_type="string" advanced="0">
     <default_value>snowStorm.snowColor = '#fff';
 snowStorm.flakesMaxActive = 64;
 snowStorm.useTwinkleEffect = true;</default_value>
     <edit_format_params>rows=5</edit_format_params>
-    <relation group_id="wutime_snowstorm_options" display_order="400"/>
+    <relation group_id="wutime_snowstorm_options" display_order="34"/>
+  </option>
+  <option option_id="wutime_snowstorm_js_customizations_snowflake" edit_format="textbox" data_type="string" advanced="0">
+    <default_value>window.SnowflakeConfig.size = 1.0;
+window.SnowflakeConfig.speed = 0.65;
+window.SnowflakeConfig.opacity = 0.5;
+window.SnowflakeConfig.density = 0.7;
+window.SnowflakeConfig.quality = 1.0;
+window.SnowflakeConfig.index = 9;</default_value>
+    <edit_format_params>rows=6</edit_format_params>
+    <relation group_id="wutime_snowstorm_options" display_order="35"/>
   </option>
   <option option_id="wutime_snowstorm_option_theme" edit_format="radio" data_type="string" advanced="0">
     <default_value>Snow</default_value>
-    <edit_format_params>Snow=Snow (light-weight)
-Default=Snow Storm</edit_format_params>
-    <relation group_id="wutime_snowstorm_options" display_order="2"/>
+    <edit_format_params>Snow={{ phrase('wutime_snowstorm_theme_snow_lightweight') }}
+Default={{ phrase('wutime_snowstorm_theme_snow_storm') }}
+Snowflake={{ phrase('wutime_snowstorm_theme_snowflake') }}</edit_format_params>
+    <relation group_id="wutime_snowstorm_options" display_order="30"/>
+  </option>
+  <option option_id="wutime_snowstorm_preview_on_options_page" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="wutime_snowstorm_options" display_order="900"/>
+  </option>
+  <option option_id="wutime_snowstorm_schedule_enable" edit_format="onoff" data_type="string" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="wutime_snowstorm_options" display_order="200"/>
+  </option>
+  <option option_id="wutime_snowstorm_schedule_end" edit_format="textbox" data_type="string" validation_class="Wutime\SnowStorm\Option\Validator" validation_method="validateScheduleDate" advanced="0">
+    <default_value>1/1</default_value>
+    <relation group_id="wutime_snowstorm_options" display_order="220"/>
+  </option>
+  <option option_id="wutime_snowstorm_schedule_start" edit_format="textbox" data_type="string" validation_class="Wutime\SnowStorm\Option\Validator" validation_method="validateScheduleDate" advanced="0">
+    <default_value>12/1</default_value>
+    <relation group_id="wutime_snowstorm_options" display_order="210"/>
+  </option>
+  <option option_id="wutime_snowstorm_scope_forums_exclude" edit_format="callback" data_type="array" advanced="0">
+    <default_value>[]</default_value>
+    <edit_format_params>\XF\Option\Forum::renderSelectMultiple</edit_format_params>
+    <sub_options>*</sub_options>
+    <relation group_id="wutime_snowstorm_options" display_order="410"/>
+  </option>
+  <option option_id="wutime_snowstorm_scope_forums_include" edit_format="callback" data_type="array" advanced="0">
+    <default_value>[]</default_value>
+    <edit_format_params>\XF\Option\Forum::renderSelectMultiple</edit_format_params>
+    <sub_options>*</sub_options>
+    <relation group_id="wutime_snowstorm_options" display_order="411"/>
   </option>
   <option option_id="wutime_snowstorm_show_every_x_views" edit_format="spinbox" data_type="positive_integer" advanced="0">
     <default_value>1</default_value>
     <edit_format_params>min=1
 max=100</edit_format_params>
-    <relation group_id="wutime_snowstorm_options" display_order="5"/>
+    <relation group_id="wutime_snowstorm_options" display_order="20"/>
   </option>
   <option option_id="wutime_snowstorm_show_mobile" edit_format="onoff" data_type="string" advanced="0">
     <default_value>0</default_value>
-    <relation group_id="wutime_snowstorm_options" display_order="200"/>
+    <relation group_id="wutime_snowstorm_options" display_order="32"/>
+  </option>
+  <option option_id="wutime_snowstorm_show_mobile_snow" edit_format="onoff" data_type="string" advanced="0">
+    <default_value>1</default_value>
+    <relation group_id="wutime_snowstorm_options" display_order="31"/>
+  </option>
+  <option option_id="wutime_snowstorm_show_mobile_snowflake" edit_format="onoff" data_type="boolean" advanced="0">
+    <default_value>0</default_value>
+    <relation group_id="wutime_snowstorm_options" display_order="33"/>
   </option>
 </options>

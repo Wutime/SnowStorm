@@ -1,23 +1,33 @@
+<xf:set var="$wutimeSnowIsMobile" value="{{ wutime_snowstorm_is_mobile() }}" />
+
 <xf:if is="$xf.options.wutime_snowstorm_option_theme == 'Default'">
-	
-	<xf:js addon="Wutime/SnowStorm" 
-		   src="wutime/snowstorm/snowstorm.js" 
-		   defer="true"
-		   min="1" />
-	
-	<xf:if is="$xf.options.wutime_snowstorm_show_mobile">
-		<xf:js>snowStorm.excludeMobile = false;</xf:js>
-	<xf:else />
-		<xf:js>snowStorm.excludeMobile = true;</xf:js>
+	<xf:if is="$xf.options.wutime_snowstorm_show_mobile OR !$wutimeSnowIsMobile">
+		<xf:js addon="Wutime/SnowStorm" 
+			src="wutime/snowstorm/snowstorm.js" 
+			defer="true"
+			min="1" />
+
+		<xf:js>
+			{{$xf.options.wutime_snowstorm_js_customizations}}
+		</xf:js>
 	</xf:if>
-	<xf:js>
-		{{$xf.options.wutime_snowstorm_js_customizations}}
-	</xf:js>
+<xf:elseif is="$xf.options.wutime_snowstorm_option_theme == 'Snowflake'" />
+	<xf:if is="$xf.options.wutime_snowstorm_show_mobile_snowflake OR !$wutimeSnowIsMobile">
+		<xf:js>
+			window.SnowflakeConfig = window.SnowflakeConfig || {};
+			{{$xf.options.wutime_snowstorm_js_customizations_snowflake}}
+		</xf:js>
+
+		<xf:js addon="Wutime/SnowStorm" 
+			src="wutime/snowstorm/snowflake.js" 
+			defer="true"
+			min="1" />
+	</xf:if>
 <xf:else />
-	
-	<xf:js addon="Wutime/SnowStorm" 
-		   src="wutime/snowstorm/snow.js" 
-		   defer="true"
-		   min="1" />
-	
+	<xf:if is="$xf.options.wutime_snowstorm_show_mobile_snow OR !$wutimeSnowIsMobile">
+		<xf:js addon="Wutime/SnowStorm" 
+			src="wutime/snowstorm/snow.js" 
+			defer="true"
+			min="1" />
+	</xf:if>
 </xf:if>

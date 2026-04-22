@@ -12,25 +12,54 @@
     <find><![CDATA[</head>]]></find>
     <replace><![CDATA[<xf:if is="$xf.options.wutime_snowstorm_enable && $xf.visitor.Option.wutime_snowstorm_enable">
 	<xf:if is="!$xf.visitor.isMemberOf($xf.options.wutime_snowstorm_ignore_usergroups)">
-		<xf:if is="$xf.session.wutime_snowstorm_count == ''">
-			<xf:set var="$xf.session.wutime_snowstorm_count" value="1" />
-		<xf:elseif is="$xf.session.wutime_snowstorm_count == 0" />
-			<xf:comment>WE JUST SHOWED</xf:comment>
-			<xf:set var="$xf.session.wutime_snowstorm_count" value="1" />
-		<xf:else />
-			<xf:comment>WE ENUMERATE</xf:comment>
-			<xf:set var="$xf.session.wutime_snowstorm_count" value="{{$xf.session.wutime_snowstorm_count+1}}" />
-		</xf:if>
-		<xf:if is="$xf.session.wutime_snowstorm_count >= $xf.options.wutime_snowstorm_show_every_x_views ">
-			
-			<xf:comment>
-				Reset our page view tracker
-			</xf:comment>
-			
-			<xf:include template="wutime_snowstorm_snowstorm_javascript"/>
-			
-			<xf:set var="$xf.session.wutime_snowstorm_count" value="0" />			
+		<xf:set var="$wutimeSnowScope" value="{{ $xf.options.wutime_snowstorm_display_scope ?: 'everywhere' }}" />
+		<xf:set var="$wutimeSnowForumId" value="{{ 0 }}" />
+		<xf:set var="$wutimeSnowIncludeForums" value="{{ is_array($xf.options.wutime_snowstorm_scope_forums_include) ? $xf.options.wutime_snowstorm_scope_forums_include : [] }}" />
+		<xf:set var="$wutimeSnowExcludeForums" value="{{ is_array($xf.options.wutime_snowstorm_scope_forums_exclude) ? $xf.options.wutime_snowstorm_scope_forums_exclude : [] }}" />
 
+		<xf:if is="$thread && $thread.node_id">
+			<xf:set var="$wutimeSnowForumId" value="{{ $thread.node_id }}" />
+		<xf:elseif is="$forum && $forum.node_id" />
+			<xf:set var="$wutimeSnowForumId" value="{{ $forum.node_id }}" />
+		<xf:elseif is="$xf.reply.thread && $xf.reply.thread.node_id" />
+			<xf:set var="$wutimeSnowForumId" value="{{ $xf.reply.thread.node_id }}" />
+		<xf:elseif is="$xf.reply.forum && $xf.reply.forum.node_id" />
+			<xf:set var="$wutimeSnowForumId" value="{{ $xf.reply.forum.node_id }}" />
+		<xf:elseif is="$xf.reply.node && $xf.reply.node.node_type_id == 'Forum' && $xf.reply.node.node_id" />
+			<xf:set var="$wutimeSnowForumId" value="{{ $xf.reply.node.node_id }}" />
+		</xf:if>
+
+		<xf:set var="$wutimeSnowScopeAllowed" value="{{ true }}" />
+
+		<xf:if is="$wutimeSnowScope == 'homepage'">
+			<xf:set var="$wutimeSnowScopeAllowed" value="{{ ((($controller == 'XF:Forum' || $controller == 'XF\Pub\Controller\ForumController') && !$forum.node_id) || $xf.reply.template == 'forum_list') }}" />
+		<xf:elseif is="$wutimeSnowScope == 'selected_forums_only'" />
+			<xf:set var="$wutimeSnowScopeAllowed" value="{{ $wutimeSnowForumId && in_array($wutimeSnowForumId, $wutimeSnowIncludeForums) }}" />
+		<xf:elseif is="$wutimeSnowScope == 'selected_forums_exclude'" />
+			<xf:set var="$wutimeSnowScopeAllowed" value="{{ !$wutimeSnowForumId || !in_array($wutimeSnowForumId, $wutimeSnowExcludeForums) }}" />
+		</xf:if>
+
+		<xf:if is="$wutimeSnowScopeAllowed">
+			<xf:if is="$xf.session.wutime_snowstorm_count == ''">
+				<xf:set var="$xf.session.wutime_snowstorm_count" value="1" />
+			<xf:elseif is="$xf.session.wutime_snowstorm_count == 0" />
+				<xf:comment>WE JUST SHOWED</xf:comment>
+				<xf:set var="$xf.session.wutime_snowstorm_count" value="1" />
+			<xf:else />
+				<xf:comment>WE ENUMERATE</xf:comment>
+				<xf:set var="$xf.session.wutime_snowstorm_count" value="{{$xf.session.wutime_snowstorm_count+1}}" />
+			</xf:if>
+			<xf:if is="$xf.session.wutime_snowstorm_count >= $xf.options.wutime_snowstorm_show_every_x_views ">
+
+				<xf:comment>
+					Reset our page view tracker
+				</xf:comment>
+
+				<xf:include template="wutime_snowstorm_snowstorm_javascript"/>
+
+				<xf:set var="$xf.session.wutime_snowstorm_count" value="0" />
+
+			</xf:if>
 		</xf:if>
 	</xf:if>
 </xf:if>
@@ -43,5 +72,135 @@ $0]]></replace>
     <replace><![CDATA[<xf:include template="wutime_snowstorm_option_code"/>
 
 $0]]></replace>
+  </modification>
+  <modification type="admin" template="option_list" modification_key="wutime_snowstorm_option_theme_dependencies" description="wutime_snowstorm_option_theme_dependencies" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<xf:macro template="option_macros" name="option_form_block"
+	arg-group="{$group}"
+	arg-options="{$group.Options}"
+	arg-forceShowAdvanced="{{ false }}" />]]></find>
+    <replace><![CDATA[$0
+
+<xf:if is="$group.group_id == 'wutime_snowstorm_options'">
+	<xf:js>
+		(function() {
+			var themeInputs = document.querySelectorAll('input[name="options[wutime_snowstorm_option_theme]"]');
+			var scopeInputs = document.querySelectorAll('input[name="options[wutime_snowstorm_display_scope]"]');
+			var scheduleInputs = document.querySelectorAll('input[name="options[wutime_snowstorm_schedule_enable]"]');
+			if (!themeInputs.length) {
+				return;
+			}
+
+			function findRow(optionId) {
+				var anchor = document.getElementById(optionId);
+				if (!anchor) {
+					return null;
+				}
+
+				var row = anchor.nextElementSibling;
+				while (row && !row.classList.contains('formRow')) {
+					row = row.nextElementSibling;
+				}
+
+				return row;
+			}
+
+			var rows = {
+				snowMobile: findRow('wutime_snowstorm_show_mobile_snow'),
+				snowStormMobile: findRow('wutime_snowstorm_show_mobile'),
+				snowStormJs: findRow('wutime_snowstorm_js_customizations'),
+				snowflakeMobile: findRow('wutime_snowstorm_show_mobile_snowflake'),
+				snowflakeJs: findRow('wutime_snowstorm_js_customizations_snowflake'),
+				scheduleStart: findRow('wutime_snowstorm_schedule_start'),
+				scheduleEnd: findRow('wutime_snowstorm_schedule_end'),
+				scopeIncludeForums: findRow('wutime_snowstorm_scope_forums_include'),
+				scopeExcludeForums: findRow('wutime_snowstorm_scope_forums_exclude')
+			};
+
+			function selectedTheme() {
+				for (var i = 0; i < themeInputs.length; i++) {
+					if (themeInputs[i].checked) {
+						return themeInputs[i].value;
+					}
+				}
+				return '';
+			}
+
+			function selectedScope() {
+				for (var i = 0; i < scopeInputs.length; i++) {
+					if (scopeInputs[i].checked) {
+						return scopeInputs[i].value;
+					}
+				}
+				return 'everywhere';
+			}
+
+			function scheduleEnabled() {
+				for (var i = 0; i < scheduleInputs.length; i++) {
+					if (scheduleInputs[i].checked) {
+						return scheduleInputs[i].value !== '0';
+					}
+				}
+				return false;
+			}
+
+			function setVisible(row, visible) {
+				if (!row) {
+					return;
+				}
+				row.style.display = visible ? '' : 'none';
+			}
+
+			function syncRows() {
+				var theme = selectedTheme();
+				setVisible(rows.snowMobile, theme === 'Snow');
+				setVisible(rows.snowStormMobile, theme === 'Default');
+				setVisible(rows.snowStormJs, theme === 'Default');
+				setVisible(rows.snowflakeMobile, theme === 'Snowflake');
+				setVisible(rows.snowflakeJs, theme === 'Snowflake');
+
+				var isScheduled = scheduleEnabled();
+				setVisible(rows.scheduleStart, isScheduled);
+				setVisible(rows.scheduleEnd, isScheduled);
+
+				var scope = selectedScope();
+				setVisible(rows.scopeIncludeForums, scope === 'selected_forums_only');
+				setVisible(rows.scopeExcludeForums, scope === 'selected_forums_exclude');
+			}
+
+			for (var i = 0; i < themeInputs.length; i++) {
+				themeInputs[i].addEventListener('change', syncRows);
+			}
+			for (var i = 0; i < scopeInputs.length; i++) {
+				scopeInputs[i].addEventListener('change', syncRows);
+			}
+			for (var i = 0; i < scheduleInputs.length; i++) {
+				scheduleInputs[i].addEventListener('change', syncRows);
+			}
+
+			syncRows();
+		}());
+	</xf:js>
+
+	<xf:if is="$xf.options.wutime_snowstorm_preview_on_options_page">
+		<xf:set var="$wutimeSnowIsMobile" value="{{ wutime_snowstorm_is_mobile() }}" />
+
+		<xf:if is="$xf.options.wutime_snowstorm_option_theme == 'Default'">
+			<xf:if is="$xf.options.wutime_snowstorm_show_mobile OR !$wutimeSnowIsMobile">
+				<xf:js addon="Wutime/SnowStorm" src="wutime/snowstorm/snowstorm.js" defer="true" min="1" />
+				<xf:js>{{$xf.options.wutime_snowstorm_js_customizations}}</xf:js>
+			</xf:if>
+		<xf:elseif is="$xf.options.wutime_snowstorm_option_theme == 'Snowflake'" />
+			<xf:if is="$xf.options.wutime_snowstorm_show_mobile_snowflake OR !$wutimeSnowIsMobile">
+				<xf:js>window.SnowflakeConfig = window.SnowflakeConfig || {};
+{{$xf.options.wutime_snowstorm_js_customizations_snowflake}}</xf:js>
+				<xf:js addon="Wutime/SnowStorm" src="wutime/snowstorm/snowflake.js" defer="true" min="1" />
+			</xf:if>
+		<xf:else />
+			<xf:if is="$xf.options.wutime_snowstorm_show_mobile_snow OR !$wutimeSnowIsMobile">
+				<xf:js addon="Wutime/SnowStorm" src="wutime/snowstorm/snow.js" defer="true" min="1" />
+			</xf:if>
+		</xf:if>
+	</xf:if>
+</xf:if>]]></replace>
   </modification>
 </template_modifications>

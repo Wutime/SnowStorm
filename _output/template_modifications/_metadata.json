@@ -1,4 +1,7 @@
 {
+    "admin/wutime_snowstorm_option_theme_dependencies.json": {
+        "hash": "7b0e71a00e7e4e7f11f8b52352186450"
+    },
     "public/wutime_snowstorm_account_preferences.json": {
         "hash": "8338e0f19b5f8ca4885ee7f47b59563c"
     },
@@ -6,6 +9,6 @@
         "hash": "bbdb8e2649652f9fffc5942865b81b86"
     },
     "public/wutime_snowstorm_page_container.json": {
-        "hash": "708572336e0692454b201ca708b127c0"
+        "hash": "06eb3e34108283f6f273c671ee0e4873"
     }
 }

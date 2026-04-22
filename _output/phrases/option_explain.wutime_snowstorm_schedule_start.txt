@@ -1,0 +1,1 @@
+Accepts values like "December 1", "Dec 1", or "12/1". Used as a recurring month/day each year.

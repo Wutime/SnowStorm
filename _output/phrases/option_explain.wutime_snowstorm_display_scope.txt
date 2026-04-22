@@ -1,0 +1,1 @@
+Choose where snow effects can render. Forum-based scope uses the forum selectors below.

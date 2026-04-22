@@ -1,0 +1,13 @@
+{
+    "edit_format": "radio",
+    "edit_format_params": "everywhere={{ phrase('wutime_snowstorm_scope_everywhere') }}\nhomepage={{ phrase('wutime_snowstorm_scope_homepage_only') }}\nselected_forums_only={{ phrase('wutime_snowstorm_scope_selected_forums_only') }}\nselected_forums_exclude={{ phrase('wutime_snowstorm_scope_selected_forums_exclude') }}",
+    "data_type": "string",
+    "sub_options": [],
+    "validation_class": "",
+    "validation_method": "",
+    "advanced": false,
+    "default_value": "everywhere",
+    "relations": {
+        "wutime_snowstorm_options": 400
+    }
+}

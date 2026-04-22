@@ -2,8 +2,8 @@
     "legacy_addon_id": "",
     "title": "Snow Storm Effect",
     "description": "",
-    "version_id": 1030170,
-    "version_string": "1.3.1",
+    "version_id": 1040070,
+    "version_string": "1.4.0",
     "dev": "Wutime",
     "dev_url": "https://woocommerce.wutime.com/product/snow-storm-effect/",
     "faq_url": "https://xenforo.com/community/resources/snow-storm-effect.7538/field?field=faq",
@@ -12,5 +12,6 @@
         "Snow Storm Effect": "https://xenforo.com/community/resources/snow-storm-effect.7538/"
     },
     "require": [],
-    "icon": "wutime-snowstorm-icon.jpg"
+    "icon": "wutime-snowstorm-icon.jpg",
+    "composer_autoload": "vendor/composer"
 }

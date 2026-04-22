@@ -1,3 +1,15 @@
+
+v1.4.0
+ADD: new snow flake system (nextapps-de)
+ADD: optional seasonal schedule window (start/end date) for public snow rendering
+ADD: display scope option (everywhere, homepage only, selected forums only, everywhere except selected forums)
+ADD: forum include/exclude selectors for scope targeting
+ADD: templater_setup listener + wutime_snowstorm_is_mobile() template helper
+ADD: Detection\MobileDetect composer package for server-side mobile detection
+ADD: admin-only preview checkbox to render selected theme on SnowStorm options page for quick testing
+
+v1.3.1
+
 v1.3.0
 UPDATE: light-weight snow to v0.0.4 for compatability with XF 2.3x, document.write() and defer
 UPDATE: create proper minified JS in production 

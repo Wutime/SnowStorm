@@ -1,0 +1,1 @@
+When enabled, snow effects render only between the start and end dates below.

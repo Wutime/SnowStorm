@@ -2,13 +2,19 @@
     "additional_files": [
         "js/wutime/snowstorm/snow.js",
         "js/wutime/snowstorm/snow.min.js",
+        "js/wutime/snowstorm/snowflake.js",
+        "js/wutime/snowstorm/snowflake.min.js",
         "js/wutime/snowstorm/snowstorm.js",
         "js/wutime/snowstorm/snowstorm.min.js"
     ],
     "exec": [
     	"uglifyjs _files/js/wutime/snowstorm/snow.js -o _files/js/wutime/snowstorm/snow.min.js",
+    	"uglifyjs _files/js/wutime/snowstorm/snowflake.js -o _files/js/wutime/snowstorm/snowflake.min.js",
     	"uglifyjs _files/js/wutime/snowstorm/snowstorm.js -o _files/js/wutime/snowstorm/snowstorm.min.js",
-        "rm -rf _build/upload/src/addons/{addon_id}/*.sh",
-        "rm -rf _build/upload/src/addons/{addon_id}/*.txt"
+      "rm -rf _build/upload/src/addons/{addon_id}/*.sh",
+      "rm -rf _build/upload/src/addons/{addon_id}/*.md",
+      "rm -rf _build/upload/src/addons/{addon_id}/cmd.php",
+      "rm -rf _build/upload/src/addons/{addon_id}/*.txt",
+      "composer install --working-dir=_build/upload/src/addons/{addon_id}/ --no-dev --optimize-autoloader"
     ]
 }

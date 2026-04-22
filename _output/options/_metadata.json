@@ -1,11 +1,50 @@
 {
+    "wutime_snowstorm_display_scope.json": {
+        "hash": "381469249448957644178e345d239273"
+    },
+    "wutime_snowstorm_enable.json": {
+        "hash": "96fdf00612fe214b9ae361bc6fef5e72"
+    },
+    "wutime_snowstorm_ignore_usergroups.json": {
+        "hash": "8a4c00eca4681794bdf3c478da65d670"
+    },
     "wutime_snowstorm_js_customizations.json": {
-        "hash": "2a3f192d666e8527ee4e083d6d8ba3d6"
+        "hash": "afd424aa1f71e766d2b844299441fe0d"
+    },
+    "wutime_snowstorm_js_customizations_snowflake.json": {
+        "hash": "0cce06b6ce1bfbf6094b66fe182ced24"
     },
     "wutime_snowstorm_option_theme.json": {
-        "hash": "9d52cd90563c819a52689614e5ffa8e0"
+        "hash": "a4d8e738f33fba7366d3c1677b00c8a4"
+    },
+    "wutime_snowstorm_preview_on_options_page.json": {
+        "hash": "20b986c3c7ca1aa9d390baf7367208e6"
+    },
+    "wutime_snowstorm_schedule_enable.json": {
+        "hash": "f9f2709e883ad06993a70875acab2018"
+    },
+    "wutime_snowstorm_schedule_end.json": {
+        "hash": "d4e3e7d21b87af25df55c2c9a10da49d"
+    },
+    "wutime_snowstorm_schedule_start.json": {
+        "hash": "94f342e98c606becbbaf35e626f4546c"
+    },
+    "wutime_snowstorm_scope_forums_exclude.json": {
+        "hash": "9c45699beb4997ca2e60a81f4faafcd7"
+    },
+    "wutime_snowstorm_scope_forums_include.json": {
+        "hash": "92153ca9079d0c5bacc91ff9bdbf1b78"
+    },
+    "wutime_snowstorm_show_every_x_views.json": {
+        "hash": "b22fcd4b4a5c6d98d6cf3fcf437a7f1b"
     },
     "wutime_snowstorm_show_mobile.json": {
-        "hash": "f9f2709e883ad06993a70875acab2018"
+        "hash": "7782ae95aa5dc4829c8098cae186ca64"
+    },
+    "wutime_snowstorm_show_mobile_snow.json": {
+        "hash": "5cf85601bd0876a39fd08c6b3bd2baf2"
+    },
+    "wutime_snowstorm_show_mobile_snowflake.json": {
+        "hash": "7c29fda376feeaa46da3da482a0100b7"
     }
 }

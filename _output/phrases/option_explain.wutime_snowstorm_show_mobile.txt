@@ -1,0 +1,1 @@
+Enable to show the Snow Storm theme for mobile visitors; disable to hide this theme on mobile devices.

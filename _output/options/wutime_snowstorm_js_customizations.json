@@ -8,6 +8,6 @@
     "advanced": false,
     "default_value": "snowStorm.snowColor = '#fff';\nsnowStorm.flakesMaxActive = 64;\nsnowStorm.useTwinkleEffect = true;",
     "relations": {
-        "wutime_snowstorm_options": 400
+        "wutime_snowstorm_options": 34
     }
 }

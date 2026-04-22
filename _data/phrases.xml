@@ -1,20 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <phrases>
-  <phrase title="option.wutime_snowstorm_enable" version_id="1000110" version_string="1.0.1 Alpha"><![CDATA[Enable snow storm]]></phrase>
-  <phrase title="option.wutime_snowstorm_ignore_usergroups" version_id="1000110" version_string="1.0.1 Alpha"><![CDATA[Ignore these user groups]]></phrase>
-  <phrase title="option.wutime_snowstorm_js_customizations" version_id="1010070" version_string="1.1.0"><![CDATA[Snow Storm JavaScript customizations]]></phrase>
-  <phrase title="option.wutime_snowstorm_option_theme" version_id="1000370" version_string="1.0.3"><![CDATA[Theme]]></phrase>
-  <phrase title="option.wutime_snowstorm_show_every_x_views" version_id="1000110" version_string="1.0.1 Alpha"><![CDATA[Show every X page views]]></phrase>
-  <phrase title="option.wutime_snowstorm_show_mobile" version_id="1010070" version_string="1.1.0"><![CDATA[Show to mobile visitors (Snow Storm theme only)]]></phrase>
-  <phrase title="option_explain.wutime_snowstorm_enable" version_id="1000110" version_string="1.0.1 Alpha"><![CDATA[]]></phrase>
-  <phrase title="option_explain.wutime_snowstorm_ignore_usergroups" version_id="1000110" version_string="1.0.1 Alpha"><![CDATA[]]></phrase>
-  <phrase title="option_explain.wutime_snowstorm_js_customizations" version_id="1010070" version_string="1.1.0"><![CDATA[Read: https://www.schillmania.com/projects/snowstorm/#customizing]]></phrase>
-  <phrase title="option_explain.wutime_snowstorm_option_theme" version_id="1000370" version_string="1.0.3"><![CDATA[]]></phrase>
-  <phrase title="option_explain.wutime_snowstorm_show_every_x_views" version_id="1000110" version_string="1.0.1 Alpha"><![CDATA[<div>If you'd like to only show snow sometimes, specify the frequency here.</div>]]></phrase>
-  <phrase title="option_explain.wutime_snowstorm_show_mobile" version_id="1000110" version_string="1.0.1 Alpha"><![CDATA[]]></phrase>
-  <phrase title="option_group.wutime_snowstorm_options" version_id="1030070" version_string="1.3.0"><![CDATA[Snow Storm Effect]]></phrase>
-  <phrase title="option_group_description.wutime_snowstorm_options" version_id="1000110" version_string="1.0.1 Alpha"><![CDATA[Add a snow storm effect to your web pages for the holidays.]]></phrase>
-  <phrase title="wutime_snowstorm_checkboxrow_title" version_id="1020070" version_string="1.2.0"><![CDATA[Snow Storm Effect]]></phrase>
-  <phrase title="wutime_snowstorm_option_title" version_id="1020070" version_string="1.2.0"><![CDATA[Enable snow effects when available]]></phrase>
-  <phrase title="wutime_snowstorm_plugins_by" version_id="1010070" version_string="1.1.0"><![CDATA[Plugins by]]></phrase>
+  <phrase title="option.wutime_snowstorm_display_scope" version_id="1040000" version_string="1.4.0"><![CDATA[Display scope]]></phrase>
+  <phrase title="option.wutime_snowstorm_enable" version_id="1040000" version_string="1.4.0"><![CDATA[Enable snow system]]></phrase>
+  <phrase title="option.wutime_snowstorm_ignore_usergroups" version_id="1040000" version_string="1.4.0"><![CDATA[Always ignore usergroups]]></phrase>
+  <phrase title="option.wutime_snowstorm_js_customizations" version_id="1040000" version_string="1.4.0"><![CDATA[Snow Storm JavaScript customizations
+]]></phrase>
+  <phrase title="option.wutime_snowstorm_js_customizations_snowflake" version_id="1040000" version_string="1.4.0"><![CDATA[Snowflake JavaScript customizations
+]]></phrase>
+  <phrase title="option.wutime_snowstorm_option_theme" version_id="1040000" version_string="1.4.0"><![CDATA[Theme
+]]></phrase>
+  <phrase title="option.wutime_snowstorm_preview_on_options_page" version_id="1040000" version_string="1.4.0"><![CDATA[Preview selected theme on this options page]]></phrase>
+  <phrase title="option.wutime_snowstorm_schedule_enable" version_id="1040000" version_string="1.4.0"><![CDATA[Run only during date range]]></phrase>
+  <phrase title="option.wutime_snowstorm_schedule_end" version_id="1040000" version_string="1.4.0"><![CDATA[Date range end]]></phrase>
+  <phrase title="option.wutime_snowstorm_schedule_start" version_id="1040000" version_string="1.4.0"><![CDATA[Date range start]]></phrase>
+  <phrase title="option.wutime_snowstorm_scope_forums_exclude" version_id="1040000" version_string="1.4.0"><![CDATA[Forums to exclude]]></phrase>
+  <phrase title="option.wutime_snowstorm_scope_forums_include" version_id="1040000" version_string="1.4.0"><![CDATA[Forums to include]]></phrase>
+  <phrase title="option.wutime_snowstorm_show_every_x_views" version_id="1040000" version_string="1.4.0"><![CDATA[Show every X page views
+]]></phrase>
+  <phrase title="option.wutime_snowstorm_show_mobile" version_id="1040000" version_string="1.4.0"><![CDATA[Show to mobile visitors (Snow Storm theme)
+]]></phrase>
+  <phrase title="option.wutime_snowstorm_show_mobile_snow" version_id="1040000" version_string="1.4.0"><![CDATA[Show to mobile visitors (Snow light-weight theme)
+]]></phrase>
+  <phrase title="option.wutime_snowstorm_show_mobile_snowflake" version_id="1040000" version_string="1.4.0"><![CDATA[Show to mobile visitors (Snowflake theme)]]></phrase>
+  <phrase title="option_explain.wutime_snowstorm_display_scope" version_id="1040000" version_string="1.4.0"><![CDATA[Choose where snow effects can render. Forum-based scope uses the forum selectors below.]]></phrase>
+  <phrase title="option_explain.wutime_snowstorm_enable" version_id="1040000" version_string="1.4.0"><![CDATA[]]></phrase>
+  <phrase title="option_explain.wutime_snowstorm_ignore_usergroups" version_id="1040000" version_string="1.4.0"><![CDATA[]]></phrase>
+  <phrase title="option_explain.wutime_snowstorm_js_customizations" version_id="1040000" version_string="1.4.0"><![CDATA[Read: https://www.schillmania.com/projects/snowstorm/#customizing
+]]></phrase>
+  <phrase title="option_explain.wutime_snowstorm_js_customizations_snowflake" version_id="1040000" version_string="1.4.0"><![CDATA[Read: https://github.com/nextapps-de/snowflake#custom-configuration
+]]></phrase>
+  <phrase title="option_explain.wutime_snowstorm_option_theme" version_id="1040000" version_string="1.4.0"><![CDATA[Theme-specific mobile and JavaScript customizations appear below based on the selected theme.
+]]></phrase>
+  <phrase title="option_explain.wutime_snowstorm_preview_on_options_page" version_id="1040000" version_string="1.4.0"><![CDATA[When enabled, the selected snow theme renders on this admin options page for testing only, even if the global enable option is off.]]></phrase>
+  <phrase title="option_explain.wutime_snowstorm_schedule_enable" version_id="1040000" version_string="1.4.0"><![CDATA[When enabled, snow effects render only between the start and end dates below.]]></phrase>
+  <phrase title="option_explain.wutime_snowstorm_schedule_end" version_id="1040000" version_string="1.4.0"><![CDATA[Accepts values like "January 1", "Jan 1", or "1/1". Cross-year ranges (for example Dec 1 to Jan 1) are supported.]]></phrase>
+  <phrase title="option_explain.wutime_snowstorm_schedule_start" version_id="1040000" version_string="1.4.0"><![CDATA[Accepts values like "December 1", "Dec 1", or "12/1". Used as a recurring month/day each year.]]></phrase>
+  <phrase title="option_explain.wutime_snowstorm_scope_forums_exclude" version_id="1040000" version_string="1.4.0"><![CDATA[Used only when Display scope is set to "Everywhere except selected forums".]]></phrase>
+  <phrase title="option_explain.wutime_snowstorm_scope_forums_include" version_id="1040000" version_string="1.4.0"><![CDATA[Used only when Display scope is set to "Selected forums only".]]></phrase>
+  <phrase title="option_explain.wutime_snowstorm_show_every_x_views" version_id="1040000" version_string="1.4.0"><![CDATA[<div>If you'd like to only show snow sometimes, specify the frequency here.</div>
+]]></phrase>
+  <phrase title="option_explain.wutime_snowstorm_show_mobile" version_id="1040000" version_string="1.4.0"><![CDATA[Enable to show the Snow Storm theme for mobile visitors; disable to hide this theme on mobile devices.
+]]></phrase>
+  <phrase title="option_explain.wutime_snowstorm_show_mobile_snow" version_id="1040000" version_string="1.4.0"><![CDATA[Enable to show the Snow (light-weight) theme for mobile visitors; disable to hide this theme on mobile devices.
+]]></phrase>
+  <phrase title="option_explain.wutime_snowstorm_show_mobile_snowflake" version_id="1040000" version_string="1.4.0"><![CDATA[Enable to show the Snowflake theme for mobile visitors; disable to hide this theme on mobile devices.]]></phrase>
+  <phrase title="option_group.wutime_snowstorm_options" version_id="1040000" version_string="1.4.0"><![CDATA[Snow Storm Effect]]></phrase>
+  <phrase title="option_group_description.wutime_snowstorm_options" version_id="1040000" version_string="1.4.0"><![CDATA[Add a snow storm effect to your web pages for the holidays.
+]]></phrase>
+  <phrase title="wutime_snowstorm_checkboxrow_title" version_id="1040000" version_string="1.4.0"><![CDATA[Snow Storm Effect]]></phrase>
+  <phrase title="wutime_snowstorm_option_title" version_id="1040000" version_string="1.4.0"><![CDATA[Enable snow effects when available]]></phrase>
+  <phrase title="wutime_snowstorm_plugins_by" version_id="1040000" version_string="1.4.0"><![CDATA[Plugins by]]></phrase>
+  <phrase title="wutime_snowstorm_schedule_end_after_start" version_id="1040000" version_string="1.4.0"><![CDATA[The end date must be after the start date (and cannot be the same day).
+]]></phrase>
+  <phrase title="wutime_snowstorm_schedule_end_invalid" version_id="1040000" version_string="1.4.0"><![CDATA[Please enter a valid end date.
+]]></phrase>
+  <phrase title="wutime_snowstorm_schedule_end_required" version_id="1040000" version_string="1.4.0"><![CDATA[Please enter an end date when date range scheduling is enabled.
+]]></phrase>
+  <phrase title="wutime_snowstorm_schedule_start_invalid" version_id="1040000" version_string="1.4.0"><![CDATA[Please enter a valid start date.
+]]></phrase>
+  <phrase title="wutime_snowstorm_schedule_start_required" version_id="1040000" version_string="1.4.0"><![CDATA[Please enter a start date when date range scheduling is enabled.
+]]></phrase>
+  <phrase title="wutime_snowstorm_scope_everywhere" version_id="1040000" version_string="1.4.0"><![CDATA[Everywhere
+]]></phrase>
+  <phrase title="wutime_snowstorm_scope_homepage_only" version_id="1040000" version_string="1.4.0"><![CDATA[Homepage only (forum list)
+]]></phrase>
+  <phrase title="wutime_snowstorm_scope_selected_forums_exclude" version_id="1040000" version_string="1.4.0"><![CDATA[Everywhere except selected forums
+]]></phrase>
+  <phrase title="wutime_snowstorm_scope_selected_forums_only" version_id="1040000" version_string="1.4.0"><![CDATA[Selected forums only
+]]></phrase>
+  <phrase title="wutime_snowstorm_theme_snow_lightweight" version_id="1040000" version_string="1.4.0"><![CDATA[Snow (light-weight)
+]]></phrase>
+  <phrase title="wutime_snowstorm_theme_snow_storm" version_id="1040000" version_string="1.4.0"><![CDATA[Snow Storm
+]]></phrase>
+  <phrase title="wutime_snowstorm_theme_snowflake" version_id="1040000" version_string="1.4.0"><![CDATA[Snowflake (nextapps-de)
+]]></phrase>
 </phrases>

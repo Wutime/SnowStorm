@@ -1,0 +1,13 @@
+{
+    "edit_format": "textbox",
+    "edit_format_params": "",
+    "data_type": "string",
+    "sub_options": [],
+    "validation_class": "Wutime\\SnowStorm\\Option\\Validator",
+    "validation_method": "validateScheduleDate",
+    "advanced": false,
+    "default_value": "12/1",
+    "relations": {
+        "wutime_snowstorm_options": 210
+    }
+}

@@ -1,0 +1,1 @@
+<div>If you'd like to only show snow sometimes, specify the frequency here.</div>

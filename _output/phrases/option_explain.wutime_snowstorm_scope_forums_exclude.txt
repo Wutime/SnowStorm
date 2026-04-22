@@ -1,0 +1,1 @@
+Used only when Display scope is set to "Everywhere except selected forums".

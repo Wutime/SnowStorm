@@ -1,0 +1,13 @@
+{
+    "edit_format": "textbox",
+    "edit_format_params": "rows=6",
+    "data_type": "string",
+    "sub_options": [],
+    "validation_class": "",
+    "validation_method": "",
+    "advanced": false,
+    "default_value": "window.SnowflakeConfig.size = 1.0;\nwindow.SnowflakeConfig.speed = 0.65;\nwindow.SnowflakeConfig.opacity = 0.5;\nwindow.SnowflakeConfig.density = 0.7;\nwindow.SnowflakeConfig.quality = 1.0;\nwindow.SnowflakeConfig.index = 9;",
+    "relations": {
+        "wutime_snowstorm_options": 35
+    }
+}
